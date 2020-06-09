@@ -1,5 +1,7 @@
 package com.example.demo.service;
 
+import java.util.List;
+
 import com.example.demo.dao.PersonDao;
 import com.example.demo.model.Person;
 
@@ -22,4 +24,9 @@ public class PersonService {
     public int addPerson (Person person ){
         return PersonDao.insertPerson( person);
     }
+    
+    public List<Person> getAllPeople(){
+        return PersonDao.selectAllPeople();
+    }
+
 }
