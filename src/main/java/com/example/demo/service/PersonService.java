@@ -17,9 +17,9 @@ import org.springframework.stereotype.Service;
 public class PersonService {
     
     private final PersonDao personDao;
-
-    @Autowired
-    public PersonService ( @Qualifier("fakeDao")  PersonDao personDao){
+  
+    @Autowired             //@qulifier("fakeDao")
+    public PersonService ( @Qualifier("Postgres")  PersonDao personDao){
         this.personDao= personDao;
     }
 

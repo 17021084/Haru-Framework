@@ -2,11 +2,17 @@ package com.example.demo.model;
 
 import java.util.UUID;
 
+import javax.validation.constraints.NotBlank;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Person {
-    private final UUID id;
+   
+  
+    @NotBlank
     private final String name;
+    
+    private final UUID id;
 
     //The POST data format is JSON so we need Anotation @JsonProperty
     
